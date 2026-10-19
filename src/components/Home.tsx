@@ -1,5 +1,5 @@
 import heroImage from "@/assets/Home.png";
-import LiquidEther from '@/components/LiquidEther';
+// import LiquidEther from '@/components/LiquidEther';
 import Logo from '@/assets/Home/logo.jpg'
 
 const Home = () => {

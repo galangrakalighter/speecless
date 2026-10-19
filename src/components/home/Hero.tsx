@@ -1,42 +1,55 @@
 import React from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import pencilCustom from '@/assets/Home/Group.webp';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FDFBF7]">
-      <div className="orb w-96 h-96 -top-20 -left-20 antigravity-float absolute rounded-full opacity-30" style={{ background: 'radial-gradient(circle, #C5A059 0%, transparent 70%)' }}></div>
-      
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 pt-20">
-        <div>
-          <h1 className="text-6xl md:text-8xl font-serif text-gray-900 mb-8 leading-[1.2]">
-            {/* Tambahkan padding vertical (py-2 atau py-4) agar ada ruang untuk huruf yang tinggi */}
-            <span className="block overflow-hidden py-2">
-                <span className="block animate-[maskReveal_0.4s_ease-out_forwards] translate-y-full font-[Arial,Helvetica,sans-serif]">
-                Speechless
-                </span>
-            </span>
-            
-            <span className="block overflow-hidden py-2 -mt-2">
-                <span className="block italic text-[#C5A059] animate-[maskReveal_0.4s_ease-out_0.2s_forwards] translate-y-full font-[Arial,Helvetica,sans-serif]">
-                Beauty Skin
-                </span>
-            </span>
-            </h1>
-          <p className="text-gray-500 text-lg md:text-xl font-light mb-12 max-w-lg liftoff active font-[Arial,Helvetica,sans-serif]">
-            Membuat kulitmu berbicara tanpa kata-kata. Kecantikan luar biasa yang membuatmu merasa percaya diri dan puas.
-          </p>
-          <button className="bg-gray-900 text-white px-12 py-6 rounded-full text-xs tracking-widest font-bold uppercase hover:bg-black transition-all flex items-center group shadow-xl liftoff active font-[Arial,Helvetica,sans-serif]">
-            Belanja Sekarang <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-          </button>
+    <main 
+      className="relative min-h-screen py-8 md:py-12 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-center overflow-hidden"
+      style={{ 
+        backgroundColor: '#f3e5d8', 
+        backgroundImage: `url('https://www.transparenttextures.com/patterns/wood-pattern.png')` 
+      }}
+    >
+      {/* Overlay halus untuk tekstur kayu */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none"></div>
+
+      <div className="relative z-10 max-w-6xl w-full mx-auto bg-white rounded-[30px] md:rounded-[40px] shadow-2xl overflow-hidden flex flex-col md:flex-row items-stretch border border-white/50">
+        
+        {/* Bagian Gambar - Responsif Height */}
+        <div className="w-full md:w-1/2 relative min-h-[300px] sm:min-h-[400px] md:min-h-[550px] lg:min-h-[650px] overflow-hidden bg-transparent">
+          <img 
+            src={pencilCustom}
+            alt="Pensil Custom" 
+            className="absolute inset-0 w-full h-full object-cover object-left transform scale-105 -translate-x-1"
+          />
         </div>
 
-        <div className="relative liftoff active">
-          <div className="aspect-[4/5] overflow-hidden rounded-[3rem] shadow-2xl antigravity-float">
-            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=800" alt="Hero" className="w-full h-full object-cover" />
+        {/* Bagian Konten Teks - Responsif Padding & Alignment */}
+        <div className="w-full md:w-1/2 p-8 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-center text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#1a237e] mb-4 md:mb-6 leading-[1.1] tracking-tighter">
+            Bingung Cari <br className="hidden sm:block" />
+            Pensil Custom <br className="hidden sm:block" />
+            Nama Di Mana?
+          </h1>
+          
+          <p className="text-gray-600 text-base sm:text-lg md:text-xl mb-8 md:mb-10 leading-relaxed max-w-md mx-auto md:mx-0">
+            Yuk jadi Mitra dari <span className="font-bold text-gray-900">Pencilvania Factory Supplier Indonesia</span>. 
+            Dijamin dapat Harga Paling Murah!
+          </p>
+
+          <div className="mt-2 md:mt-4">
+            <a 
+              href="https://wa.me/62895807445169" 
+              target='_blank'
+              rel="noopener noreferrer"
+              className="inline-block border-b-[5px] sm:border-b-[6px] md:border-b-[10px] border-gray-800 text-3xl sm:text-4xl md:text-5xl font-black text-gray-800 hover:text-[#1a237e] hover:border-[#1a237e] transition-all duration-300 transform hover:scale-105 active:scale-95 italic"
+            >
+              Ya, Saya Mau!
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 
